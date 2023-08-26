@@ -1,21 +1,18 @@
 const assertArraysEqual = function(actual, expected) {
-  // CHeck if arrays have same length, return false if !==
+  // Check if arrays have same length, return false if !==
   if (actual.length !== expected.length) {
-    return false;
+    console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`);
+    return;
   }
-  //Loop through elements in arrays to see if they !==
+  // Loop through elements in arrays to see if they !==
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] !== expected[i]) {
-      return false;
+      console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`);
+      return;
     }
   }
-  //We now know if the arrays are equal or not equal. We can now console.log to output to the console
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`);
-  }
-
+  // We now know that the arrays are equal. We can now console.log to output to the console
+  console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
 };
 
 /*
