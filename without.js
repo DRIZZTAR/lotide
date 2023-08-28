@@ -1,13 +1,13 @@
 const without = function(source, itemsToRemove) {
   let newArray = [];
-//Loop through source to check if any elements are in itemsToRemove
+  //Loop through source to check if any elements are in itemsToRemove
   for (let i = 0; i < source.length; i++) {
     //if element is NOT include in itemsToRemove, push element to newArray
     if (!itemsToRemove.includes(source[i])) {
       newArray.push(source[i]);
     }
   }
-//Retrur newArray after we've looped through source array :)!
+  //Retrur newArray after we've looped through source array :)!
   return newArray;
 };
 
@@ -72,3 +72,13 @@ const result4 = without(["space", "time", "everything"], [1, "time", "space"]);
 console.log(result4);
 // Test whether the result is as expected
 assertArraysEqual(result4, ["everything"]);
+
+// eqArrayTest 1
+const test1 = without([1, 2, 3], [1]);
+const expected1 = [2, 3];
+console.log(eqArrays(test1, expected1)); // true
+
+// eqArraysTest 2
+const test2 = without(["1", "2", "3"], [1, 2, "3"]);
+const expected2 = ["1", "2"];
+console.log(eqArrays(test2, expected2)); // true

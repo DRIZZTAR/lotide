@@ -65,3 +65,49 @@ console.log(middle([1, 2, 3]));
 console.log(middle([1, 2, 'Monkey', 4, 5]));
 console.log(middle(['Teenage', 'Mutant', 'Ninja', 'Turtles']));
 console.log(middle([1, 2, 3, 4, 5, 6]));
+
+// Test 1 assertArraysEqual/middle
+const result1 = middle([1, 2, 3]);
+const expectedResult1 = [2];
+assertArraysEqual(result1, expectedResult1);
+
+// Test 2
+const result2 = middle([1, 2, 3, 4]);
+const expectedResult2 = [2, 3];
+assertArraysEqual(result2, expectedResult2);
+
+// Test 1 eqArrays/ middle
+const results1 = eqArrays([1, 2, 3], [1, 2, 3]);
+const expectedResults1 = true;
+if (results1 === expectedResults1) {
+  console.log(`Test 1 passed: ${results1} === ${expectedResults1}`);
+} else {
+  console.log(`Test 1 failed: expected ${expectedResults1}, but got ${results1}`);
+}
+
+// Test 2
+const results2 = eqArrays([1, 2, 3], [3, 2, 1]);
+const expectedResults2 = false;
+if (results2 === expectedResults2) {
+  console.log(`Test 2 passed: ${results2} === ${expectedResults2}`);
+} else {
+  console.log(`Test 2 failed: expected ${expectedResults2}, but got ${results2}`);
+}
+
+// Test 3
+const results3 = eqArrays(["1", "banana", "3"], ["1", "banana", "3"]);
+const expectedResults3 = true;
+if (results3 === expectedResults3) {
+  console.log(`Test 3 passed: ${results3} === ${expectedResults3}`);
+} else {
+  console.log(`Test 3 failed: expected ${expectedResults3}, but got ${results3}`);
+}
+
+// Test 4
+const results4 = eqArrays(["1", "2", "ranch dressing"], ["1", "2", "ranch dressing"]);
+const expectedResults4 = false;
+if (results4 === expectedResults4) {
+  console.log(`Test 4 passed: ${results4} === ${expectedResults4}`);
+} else {
+  console.log(`Test 4 failed: expected ${expectedResults4}, but got ${results4}`);//fails because the arrays are equal but we expected false
+}

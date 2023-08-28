@@ -15,8 +15,8 @@ const assertArraysEqual = function(actual, expected) {
   console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
 };
 
-/*
+
 assertArraysEqual("Lighthouse Labs", "Bootcamp");
 assertArraysEqual("That's a spicy meatball", "That's a spicy meatball");
 assertArraysEqual(1, 1);
-assertArraysEqual(42, 1991);*/
+assertArraysEqual(42, 1991);

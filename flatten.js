@@ -56,12 +56,63 @@ const eqArrays = function(actual, expected) {
 };
 
 //tests
-const superHeros = ["Batman", "Spider-man", "Hulk"]
+const superHeros = ["Batman", "Spider-man", "Hulk"];
 const result1 = (flatten([superHeros, ["Green Lantern", "Green Goblin"], "Venom"]));
 console.log(`Flatten result 1, ${result1}`);
 console.log(`Original list ${superHeros}`);
-console.log('---'); 
+console.log('---');
 console.log(flatten([1, 2, [3, 4], 5, [6]]));
-console.log('---'); 
+console.log('---');
 console.log(flatten([42,48,[1, 2, 3], 'Jamaica']));
+
+// Test 1
+const test1 = flatten([1, 2, [3, 4], 5, [6]]);
+const expected1 = [1, 2, 3, 4, 5, 6];
+assertArraysEqual(test1, expected1);
+
+// Test 2
+const test2 = flatten([42,48,[1, 2, 3], 'Jamaica']);
+const expected2 = [42,48,1, 2, 3,'Jamaica'];
+assertArraysEqual(test2, expected2);
+
+// Test 3
+const test3 = flatten([superHeros, ["Green Lantern", "Green Goblin"], "Venom"]);
+const expected3 = ["Batman", "Spider-man", "Hulk", "Green Lantern", "Green Goblin", "Venom"];
+assertArraysEqual(test3, expected3);
+
+// Test 1
+const results1 = eqArrays([1, 2, 3], [1, 2, 3]);
+const expectedResult1 = true;
+if (results1 === expectedResult1) {
+  console.log(`Test 1 passed: ${results1} === ${expectedResult1}`);
+} else {
+  console.log(`Test 1 failed: expected ${expectedResult1}, but got ${results1}`);
+}
+
+// Test 2
+const results2 = eqArrays([1, 2, 3], [3, 2, 1]);
+const expectedResult2 = false;
+if (results2 === expectedResult2) {
+  console.log(`Test 2 passed: ${results2} === ${expectedResult2}`);
+} else {
+  console.log(`Test 2 failed: expected ${expectedResult2}, but got ${results2}`);
+}
+
+// Test 3
+const results3 = eqArrays(["1", "2", "3"], ["1", "2", "3"]);
+const expectedResult3 = true;
+if (results3 === expectedResult3) {
+  console.log(`Test 3 passed: ${results3} === ${expectedResult3}`);
+} else {
+  console.log(`Test 3 failed: expected ${expectedResult3}, but got ${results3}`);
+}
+
+// Test 4
+const results4 = eqArrays(["1", "2", "3"], ["1", "2", 3]);
+const expectedResult4 = false;
+if (results4 === expectedResult4) {
+  console.log(`Test 4 passed: ${results4} === ${expectedResult4}`);
+} else {
+  console.log(`Test 4 failed: expected ${expectedResult4}, but got ${results4}`);
+}
 

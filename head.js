@@ -1,9 +1,7 @@
 
 // FUNCTION IMPLEMENTATION
 
-function head(array) {
-  return array[0]; 
-}
+const head = array => array[0];
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
