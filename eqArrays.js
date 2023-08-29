@@ -1,3 +1,4 @@
+//eqArrays
 const eqArrays = function(actual, expected) {
   // CHeck if arrays have same length, return false if !==
   if (actual.length !== expected.length) {
