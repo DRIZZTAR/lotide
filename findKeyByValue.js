@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 };
 
-// findKeyByValue
+// findKeyByValue takes in object and value as parameters
 const findKeyByValue = function(object, value) {
   //we set a variable to undefined because we have not found a key yet
   //If we find no key found key will remain undefined

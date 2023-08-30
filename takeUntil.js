@@ -47,8 +47,8 @@ const eqArrays = function(actual, expected) {
   return true;
 };
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
+const  more = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+const results1 = takeUntil( more, x => x < 0);
 
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
@@ -58,7 +58,7 @@ const results3 = takeUntil(data3, x => x === 'Batman');
 
 //test
 console.log('---');
-console.log("Test data1:");
+console.log("Test  more:");
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
 console.log('---');
 console.log("Test data2:");
@@ -67,7 +67,7 @@ console.log('---');
 console.log("Test data3:");
 assertArraysEqual(results3, ["Superman", "Spider-Man"]);
 console.log('---');
-console.log("Results for data1:");
+console.log("Results for  more:");
 console.log(results1);
 console.log('---');
 console.log("Results for data2:");
