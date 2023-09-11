@@ -1,4 +1,4 @@
-const assertArraysEqual = require('../assertArraysEqual')
+const assertArraysEqual = require('../assertArraysEqual');
 
 // Test cases for assertArraysEqual
 
