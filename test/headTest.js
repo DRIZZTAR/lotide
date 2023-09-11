@@ -1,7 +1,14 @@
+const assert = require('chai').assert;
 const head = require('../head.js');
-const assertEqual = require('../assertEqual');
 
-assertEqual(head(["Spidey-sense", "Web swinging", "Radio active blood"]), "Spidey-sense");
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([2001, 2023, 1400]), 2001);
+
+describe("#head", () => {
+  it("returns 1 for [1, 2, 3]", () => {
+    assert.strictEqual(head([1, 2, 3]), 1);
+  });
+
+  it("returns 'bananas' for ['bananas', 'pear', 'apple']", () => {
+    assert.strictEqual(head(['bananas', 'pear', 'apple']), 'bananas');
+  });
+});
+

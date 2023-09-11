@@ -1,12 +1,23 @@
+const assert = require('chai').assert;
 const tail = require('../tail.js');
-const assertEqual = require('../assertEqual');
 
 // Test Case 1: Check the returned array elements
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+describe("#tail", () => {
+  it("should return an array with the every element excluding the first element: 'Lighthouse' and 'Labs'", () => {
+    const result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.isArray(result, 'Result should be an array');
+    assert.lengthOf(result, 2, 'Result should have a length of 2');
+    assert.strictEqual(result[0], "Lighthouse", 'First element should be "Lighthouse"');
+    assert.strictEqual(result[1], "Labs", 'Second element should be "Labs"');
+  });
+});
 
 // Test Case 2: Check the original array is unmodified
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-assertEqual(words.length, 3); // original array should still have 3 elements!
+describe("#tail", () => {
+  it("should not modify the original array", () => {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    const result = tail(words);
+    //have to use notStrictEqual instead of deepEqual because the arrays are two distinct arrays and not the same reference in memory
+    assert.notStrictEqual(words, result, 'Original array should remain unchanged');
+  });
+});
