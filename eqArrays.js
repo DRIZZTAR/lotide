@@ -14,8 +14,4 @@ const eqArrays = function(actual, expected) {
   return true;
 };
 
-// TEST CODE
-eqArrays([42, 42, 42], [42, 42, 42]); // true
-eqArrays([1, 2, 3], [3, 2, 1]); // false
-eqArrays(["Batman", "Spider-man", "Hulk"], ["Batman", "Green Goblin", "Hulk"]); // false
-eqArrays(["Batman", "Spider-man", "Hulk"], ["Batman", "Spider-man", "Hulk"]); // true
+module.exports = eqArrays;
