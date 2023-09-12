@@ -12,7 +12,7 @@ const letterPositions = function(sentence) {
       if (letterPositions[char]) {
         //add index position to key
         letterPositions[char].push(i);
-      }   else {
+      } else {
         //creating key and initialize its value/index
         letterPositions[char] = [i];
       }
