@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const without = require('../without.js'); // Import your without function
+const without = require('../without.js');
 
 describe('without', function() {
   it('should return an array without the specified items', function() {

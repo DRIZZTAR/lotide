@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const countOnly = require('../countOnly'); // Import your countOnly function
+const countOnly = require('../countOnly');
 
 // Test case 1: Count specific elements
 describe('countOnly', function() {

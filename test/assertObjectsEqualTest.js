@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const assertObjectsEqual = require('../assertObjectsEqual.js'); // Replace with the correct path to your assertObjectsEqual module
+const assertObjectsEqual = require('../assertObjectsEqual.js');
 
 describe('#assertObjectsEqual', () => {
   it('should return true for equal objects', () => {

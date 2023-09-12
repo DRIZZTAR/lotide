@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const flatten = require('../flatten.js'); // Import your flatten function
+const flatten = require('../flatten.js');
 
 describe('flatten', function() {
   it('should flatten a nested array of strings', function() {
