@@ -14,7 +14,7 @@ const letterPositions = function(sentence) {
         letterPositions[char].push(i);
       } else {
         // If the character is not yet in the `letterPositions` object,
-        // create a new array with the current position as its first element.
+        // create a new array with the current position as its first element
         letterPositions[char] = [i];
       }
     }
