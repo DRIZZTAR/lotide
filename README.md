@@ -16,13 +16,11 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Require it:**
 
-`const _ = require('@username/lotide');`
+`const _ = require('@drizztar/lotide');`
 
 **Call it:**
 
 `const results = _.tail([1, 2, 3]) // => [2, 3]`
-
-Certainly! Here's the documentation for the functions you provided:
 
 ## Documentation
 
