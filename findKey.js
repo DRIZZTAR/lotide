@@ -1,4 +1,4 @@
-// The `findKey` function takes an object and a callback function as parameters.
+// findKey function takes an object and a callback function as parameters.
 function findKey(obj, callback) {
   // Iterate through the keys of the object.
   for (let key in obj) {
