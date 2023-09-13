@@ -1,5 +1,3 @@
-// flatten.js
-
 const flatten = function(nestedArray) {
   // Create an empty array for the new flattened array
   const flattened = [];
