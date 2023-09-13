@@ -5,18 +5,18 @@ describe('#assertObjectsEqual', () => {
   it('should return true for equal objects', () => {
     const obj1 = { a: 1, b: 2 };
     const obj2 = { a: 1, b: 2 };
-    assert.doesNotThrow(() => assertObjectsEqual(obj1, obj2));
+    assert.deepStrictEqual(assertObjectsEqual(obj1, obj2), true);
   });
 
   it('should return false for unequal objects', () => {
     const obj1 = { a: 1, b: 2 };
     const obj2 = { a: 1, b: 3 };
-    assert.throws(() => assertObjectsEqual(obj1, obj2));
+    assert.deepStrictEqual(assertObjectsEqual(obj1, obj2), false);
   });
 
   it('should return true for objects with different key orders', () => {
     const obj1 = { a: 1, b: 2 };
     const obj2 = { b: 2, a: 1 };
-    assert.doesNotThrow(() => assertObjectsEqual(obj1, obj2));
+    assert.deepStrictEqual(assertObjectsEqual(obj1, obj2), true);
   });
 });
